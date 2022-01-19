@@ -1,0 +1,296 @@
+.demoTech
+    width: 100%
+    height: 100%
+    padding-top: 20px
+
+.demoTechDesc
+    display: none
+
+.demoTechDescActive
+    transition: 1s
+    display: block
+
+.cardProj
+    height: auto
+    max-width: 1000px
+    width: 100%
+
+    display: flex
+    align-items: center
+    
+    margin-bottom: 15px
+    
+
+    @media screen and (max-width: 785px)
+        max-width: 100%
+        min-height: 100%
+        max-height: 100%
+        min-width: 100%
+
+        margin-bottom: 0
+
+.tituloInfo
+    > h1
+        > .fa-tasks
+            font-size: 40px
+
+            @media screen and (max-width: 1000px)
+                font-size: 24px
+
+.postPlaceholder
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    > div
+        flex: 1
+
+.infoProj
+    min-height: 500px
+    max-height: 500px
+    width: 440px
+
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.144)
+    z-index: 9
+
+    display: flex
+    flex-direction: column
+    padding: 10px 20px
+
+    background: linear-gradient(180deg, #506a89 -99.92%, #1b3c6d00 98.9%)
+
+
+    @media screen and (max-width: 785px)
+        width: 100%
+
+        height: auto
+        max-height: 800px
+        //min-width: 310px
+
+.projContent
+    margin-top: 10px
+    max-height: 200px
+
+    @media screen and (max-width: 785px)
+        max-height: 100px
+
+
+.projContent > div 
+    height: 200px
+    padding-right: 15px
+    overflow: auto
+
+    @media screen and (max-width: 785px)
+        height: 100px
+
+.demoProjMobile
+    display: none
+    margin-top: 25px
+    font-size: larger
+
+    > .demoImg
+        margin-top: 15px
+
+        > img
+            border-radius: 0
+
+    > .demoDesc
+        margin-top: 15px
+        font-size: larger
+
+    @media screen and (max-width: 785px)
+        display: block
+
+.demoProj
+    height: 445px
+    width: calc(100% - 440px)
+
+    background-color: rgba(255, 255, 255, 0)
+    box-shadow: 0px 0px 19px 7px rgba(0, 0, 0, 0.25)
+    display: flex
+    justify-content: space-between
+    
+    padding: 15px
+    border-radius: 0 15px 15px 0
+    flex-direction: column
+
+    @media screen and (max-width: 785px)
+        display: none
+
+.demoImg
+    width: 100%
+    height: 380px
+    border-radius: 0 15px 15px 0
+
+    @media screen and (max-width: 785px)
+        position: relative
+    
+
+
+.demoImg > img
+    width: 100%
+    height: 100%
+
+    border-radius: 0 15px 15px 0
+
+    object-fit: contain
+    object-position: center center
+
+
+.demoDesc
+    width: 100%
+    height: calc(100% - 345px)
+    color:#4c1f75
+
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+    @media screen and (max-width: 785px)
+        position: absolute
+        bottom: 0
+        background: rgb(34,34,34);
+        background: linear-gradient(0deg, rgba(34,34,34,1) 43%, rgba(9,9,121,0) 100%);
+        justify-content: flex-end
+        align-items: flex-start
+        
+
+
+.demoDesc > i, .demoDesc > a
+    font-size: 24px
+    color: #fff
+    margin-left: 10px
+    cursor: pointer
+    transition: 0.5s
+
+    @media screen and (max-width: 785px)
+        font-size: 30px
+
+.demoDesc > a:hover
+    transition: 0.5s
+    color: #506a89
+
+.smallProj__
+    &placeholder
+        max-width: 1000px
+        width: 100%
+        height: 100%
+
+        display: flex
+        justify-content: space-between
+
+        margin-bottom: 20px
+
+        @media screen and (max-width: 785px)
+            min-height: 238px
+            overflow-x: auto
+            padding: 10px 0
+
+
+    &square
+        border-radius: 15px 15px 0 0
+        cursor: pointer
+        display: flex
+
+        width: 100%
+        height: 100%
+        max-width: 286px
+        max-height: 286px
+
+        opacity: 100%
+        
+        justify-content: center
+        align-items: center
+
+        position: relative
+        transition: 1.5s
+
+        > img
+            width: 100%
+            height: 100%
+
+            object-fit: cover
+            object-position: center
+
+            transition: 1s
+            opacity: 100%
+
+        @media screen and (max-width: 785px)
+            min-width: 80%
+            min-width: 80%
+
+    &square:not(:last-child)
+        @media screen and (max-width: 785px)
+            margin-right: 15px
+
+    &title
+        position: absolute
+
+        display: flex
+        align-items: center
+        justify-content: flex-start
+
+        padding: 0 5px
+
+        bottom: 0px
+
+        width: 100%
+        height: 0
+
+        opacity: 0%
+        backdrop-filter: blur(0px)
+
+        transition: 1.5s
+
+        > b
+            opacity: 0%
+            transition: 0.5s
+
+        
+
+.squareOp
+    opacity: 100%
+    transition: 0.5s
+
+    > img
+        transition: 0.5s
+        opacity: 50%
+
+.titleGrowUp
+    height: 50px
+    opacity: 100%
+    bottom: 0px
+    position: absolute
+    transition: 0.5s
+
+    backdrop-filter: blur(6px)
+
+    > b
+        opacity: 100%
+        transition: 1s
+
+.postPlaceholder
+    margin-bottom: 0
+
+    @media screen and (max-width: 785px)
+        position: relative
+        margin-bottom: 310px
+
+#mobilePosition
+
+    display: none
+    @media screen and (max-width: 1000px)
+        display: block
+        position: absolute
+        bottom: -250px
+        min-width: 100%
+
+#main__proj
+    min-width: 100%
+    max-width: 1000px
+
+    display: flex
+    justify-content: center

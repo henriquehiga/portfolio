@@ -1,0 +1,107 @@
+.ballFoto {
+  position: absolute;
+  width: 486px;
+  height: 486px;
+  right: 25px;
+  z-index: 1;
+  top: 85px;
+  border-radius: 50%;
+  background: linear-gradient(268deg, #506a895d 23.3%, rgba(196, 196, 196, 0) 118.24%);
+}
+
+.ballFoto > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.infoHeader {
+  position: absolute;
+  width: 50%;
+  height: 190px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 9999;
+  padding: 0 25px;
+  bottom: calc(50% - 90px);
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .infoHeader {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    padding: 0 10px;
+  }
+}
+
+.infoHeader > div > h1 {
+  font-size: 2.9rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .infoHeader > div > h1 {
+    font-size: 1.9rem;
+  }
+}
+
+.headerRedesSociais {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-size: 34px;
+  text-align: start;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .headerRedesSociais {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.headerRedesSociais > a {
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: white;
+  margin-right: 10px;
+}
+
+.headerRedesSociais > a:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #394c62;
+}
+
+@media screen and (max-width: 1000px) {
+  .fotoDiv {
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=header.css.map */

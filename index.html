@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./src/fb.js"></script>
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/placeholder/placeholder.css">
+    <link rel="stylesheet" href="./src/styles/components/nav/nav.css">
+    <link rel="stylesheet" href="./src/styles/effect/effect.css">
+    <link rel="stylesheet" href="./src/styles/components/header/header.css">
+    <link rel="stylesheet" href="./src/styles/components/formulario/formulario.css">
+    <link rel="stylesheet" href="./src/styles/components/roadmap/roadmap.css">
+    <link rel="stylesheet" href="./src/styles/components/content/content.css">
+    <link rel="stylesheet" href="./src/styles/components/post/post.css">
+    <link rel="stylesheet" href="./src/styles/components/footer/footer.css">
+    <link rel="stylesheet" href="./src/styles/components/goals/goals.css">
+    <link rel="stylesheet" href="./src/styles/components/nav/nav-mobile.css">
+    
+    <style>
+
+        @media screen and (max-width: 1000px) {
+
+            .ballFoto{
+                max-width: 280px;
+                max-height: 280px;
+                min-width: 280px;
+                min-height: 280px;
+
+                z-index: 1;
+                position: static;
+            }
+
+            .infoHeader{
+                width: 100%;
+                height: auto;
+                bottom: 0;
+                padding: 0 10px;
+            }
+
+            .infoHeader > div > .texto {
+                max-height: 200px;
+                padding: 20px 0;
+            }
+
+            .infoHeader > div > .texto > div {
+                overflow: auto;
+                max-height: 150px;
+            }
+
+            .content__placeholder{
+                width: 100%;
+            }
+            
+        }
+
+        .buttonsCV{
+            margin-top: 15px;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .buttonsCV > a{
+            padding: 15px 35px;
+            border: none;
+
+            transition: 1s;
+            background-color:#506a89;
+            color: white;
+
+            font-size: large;
+            font-weight: bolder;
+
+            cursor: pointer;
+        }
+
+        .buttonsCV > a > button {
+            border: none;
+            color: white;
+            font-size: 16px;
+            background-color: #506a89;
+            width: 100%;
+            height: 100%;
+        }
+
+        .buttonsCV > a:hover, .buttonsCV > a:hover > button:hover{
+            transition: 0.5s;
+            background-color: #394c62;
+        }
+
+        .tituloPlaceholder{
+            display: flex;
+            width: 1000px;
+            height: 200px;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        @media screen and (max-width: 1000px) {
+            
+        }
+
+        .tituloPost{
+            position: relative;
+            display: flex;
+
+            max-width: 1000px;
+            height: 100%;
+
+
+            align-items: center;
+            justify-content: flex-start;
+
+            padding-left: 25px;
+        }
+
+        .tituloInfo{
+            width: 100%;
+            padding-left: 180px;
+        }
+
+        .tituloInfo > h1{
+
+            font-size: 58px;
+
+        }
+
+        .ballChar{
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f700 6px ), repeating-linear-gradient( #00000000, #506a89 );
+            border-radius: 50%;
+            bottom:0;
+            left: 0px;
+
+            z-index: -2;
+        }
+
+        .textoInfo{
+            max-height: 128px;
+            overflow: auto;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .tituloPlaceholder{
+                padding: 0 70px;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+
+            .tituloPlaceholder{
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+            }
+
+
+            .ballChar{
+                left: 0;
+
+                width: 128px;
+                height: 128px;
+
+                bottom: 25px;
+            }
+
+            .tituloInfo{
+                width: 86%;
+                padding: 0;
+            }
+
+            .tituloInfo > h1{
+
+                font-size: 32px;
+
+            }
+
+        }
+
+        .ballChar > img{
+            width: 100%;
+            height: 100%;
+
+            border-radius: 90%;
+
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .projTec{
+            width: 100%;
+            height: 100%;
+            padding-top: 10px;
+
+        }
+
+
+        .tecIcons{
+            display: flex;
+            align-items: center;
+        }
+
+        .tecIcons > i{
+            font-size: 36px;
+            margin-top: 5px;
+            margin-right: 10px;
+
+            transition: 0.3s;
+            transform: translateY(5);
+
+            cursor: pointer;
+        }
+
+        .techIconsActive{
+            transition: 0.4s;
+            transform: translateY(5px);
+            color: #506a89;
+        }
+
+        .infoTitle{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            height: 31px;
+            justify-content: space-between;
+        }
+
+
+        @media screen and (max-width: 1000px) {
+            .tituloPost{
+                padding: 15px 0;
+            }
+
+            .tituloFoto{
+
+                min-width: 150px;
+                min-height: 94px;
+            }
+
+            .header{
+                height: 750px;
+                background: radial-gradient(73.67% 27.24% at 42.34% 58.79%, #616ABB 0%, #1B3C6D 100%)
+            }
+
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            z-index: 99999999999;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 5px;
+            padding: 5px;
+            z-index: 99999999999;
+        }
+
+        ::-webkit-scrollbar-thumb {
+        background:#4c6483;
+        border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+        background:#304053;
+        }
+
+        ::-moz-selection{
+            background: #304053;
+            color: white;
+        }
+
+        ::selection{
+            background: #13294b;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div  class="nav__placeholder">
+
+        <nav class="nav__content">
+
+            <span>
+                <h1>Higa</h1>
+                <b>Front-end Developer</b>
+            </span>
+
+            <span>
+                <i onclick="navMobile('nav-mobile')" class="fas fa-bars"></i>
+            </span>
+
+            <ul>
+                <li onclick="alteraPag(this.id)" id="nav__about">
+                    <a href="#sec__about"><i class="fas fa-address-card"></i> Sobre</a>
+                </li>
+                
+                <li onclick="alteraPag(this.id)" id="nav__project">
+                    
+                   <a href="#sec__project"> <i class="fas fa-tasks"></i> Projetos </a>
+                
+                </li>
+
+                <li onclick="alteraPag(this.id)" id="nav__roadmap">
+                    
+                    <a href="#sec__roadmap"> <i class="fas fa-crosshairs"></i> Objetivos </a>
+                 
+                 </li>
+                
+                <li onclick="alteraPag(this.id)" id="nav__contact">
+
+                    <a href="#sec__contact"><i class="fas fa-paper-plane"></i> Contato</a>
+
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div id="nav-mobile" class="nav-mobile-placeholder">
+        <div id="wrapperMob" class="nav-mobile-wrapper">
+            <ul>
+                <li onclick="alteraPag(this.id)" id="nav__about">
+                    <a href="#sec__about">Sobre</a>
+                </li>
+                
+                <li onclick="alteraPag(this.id)" id="nav__project">
+                    
+                   <a href="#sec__project"> Projetos </a>
+                
+                </li>
+
+                <li onclick="alteraPag(this.id)" id="nav__roadmap">
+                    
+                    <a href="#sec__roadmap"> Objetivos </a>
+                 
+                 </li>
+                
+                <li onclick="alteraPag(this.id)" id="nav__contact">
+
+                    <a href="#sec__contact">
+                     Contato</a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <article onclick="navMobileClose('nav-mobile')" class="mainContent__placeholder">
+        <section id="sec__about" class="header__placeholder">
+
+            <div class="infoHeader">
+                <div>
+                    <h1>Henrique Higa <i class="fas fa-code"></i></h1>
+                    <span style="display: flex; align-items: flex-end;"><b>Front-end Developer </b> <span class="line"></span></span>
+                    <div class="texto">
+                        <div id="myDescription">
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="headerRedesSociais">
+
+                    <a href="https://www.instagram.com/codehiga" target="__blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/henriqueynh" target="__blank"><i class="fab fa-linkedin"></i></a>
+
+                </div>
+
+                <div class="buttonsCV">
+                    <a target="__blank" href="./HENRIQUEHIGA_CV.pdf">Acessar CV</a>
+                </div>
+               
+            </div>
+
+            <div class="fotoDiv">
+                <div class="ballFoto">
+                    <img src="https://media-exp1.licdn.com/dms/image/C4E03AQH8ufXbZFolcw/profile-displayphoto-shrink_800_800/0/1633716252172?e=1648080000&v=beta&t=6tMWMevdL1VxHxgj_52488jbCO1WOjNoxDQEQ5Rht2M" alt="">
+                </div>
+    
+                <div class="ballEfeitoFoto">
+                </div>
+    
+                <div class="ballEfeitoFoto2">
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="content__placeholder">
+            <div class="secoesPost"> 
+
+            <section id="sec__project">
+
+
+                <div>
+                <div class="tituloPlaceholder">
+
+                    <div class="tituloPost">
+
+                        <div class="tituloFoto">
+    
+                            <div class="ballChar">
+                                <img src="./src/img/Imagem 2.png" alt="">
+                            </div>
+
+                        </div>
+    
+                        <div class="tituloInfo">
+    
+                            <h1>Projetos <i class="fas fa-tasks"></i></h1>
+
+                            <div id="projects-desc-text" class="textoInfo">
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="postPlaceholder">
+
+                    <div class="smallProj__placeholder" id="small__proj">
+                    </div>
+
+                    <div id="main__proj">
+                    </div>
+
+                    <div id="mobilePosition">
+                    </div>
+
+                </div>
+            </div>
+                
+            </section>
+
+            <section id="sec__roadmap">
+                <article class="roadmap__placeholder">
+
+                    <div class="roadmap__content">
+                        
+                        <div class="roadmap__header">
+                            <div class="roadmapheader__info">
+                                <h1>Objetivos <i class="fas fa-crosshairs"></i></h1>
+                                <span id="goals-desc-text"></span>
+                            </div>
+
+                            <div class="roadmapheader__img">
+                                <img src="./src/img/Imagem 3.png" alt="">
+                            </div>
+                        </div>
+
+                        <div id="cardsPlaceholder" class="roadmap__cardsplaceholder">
+
+                            
+                        </div>
+
+                        
+                    </div>
+
+                </article>
+            </section>
+
+            <section id="sec__contact">
+                <article class="formulario__placeholder">
+
+                    <div class="formulario__content">
+                        
+                        <div class="formulario__header">
+
+                            <div class="header__info">
+                                <h2>Entre em contato! <i class="fas fa-paper-plane"></i></h2>
+                                <span id="contact-text"></span>
+                            </div>
+
+                            <div class="header__img">
+                                <img src="./src/img/Imagem.png" alt="">
+                            </div>
+
+                            <div class="ballForm"></div>
+                            <div class="ballForm2"></div>
+
+                        </div>
+
+                        <div class="formulario__form">
+                            
+                            <div class="inputFull">
+                                <input id="form__nome" type="text" placeholder="Nome" required/>
+                                <input id="form__email" type="email" placeholder="E-mail" required/>
+                                <input id="form__tel" type="text" placeholder=" Telefone" required/>
+                                <input id="form__assunto" type="text" placeholder="Assunto" required/>
+
+                                <textarea style="max-width: 100%; margin-bottom: 0" id="form__msg" type="text" placeholder="Sua mensagem..." required></textarea>
+                                
+                                <div style="height: 70px;width: 100%; display: flex; justify-content: center; align-items: center;">
+                                    <b>Enviar mensagem: </b>
+                                </div>
+
+                                <div id="buttonsDiv" class="sendForm">
+
+                                    <button onclick="verificaCampos('email')">Via E-mail <i class="far fa-envelope"></i></button>
+                                    <button onclick="verificaCampos('whats')">Via Whats <i class="fab fa-whatsapp"></i></button>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </article>
+            </section>
+
+        </div>
+
+            <div class="ball2">
+            </div>
+        
+            <div class="ball4">
+            </div>
+
+            <div class="square1">
+            </div>
+
+            <div class="square2">
+            </div>
+
+            <div class="arrow1"> 
+            </div>
+
+            <div class="arrow2"> 
+            </div>
+
+        </section>
+        
+    </article>
+
+    <article id="footer-content" onclick="navMobileClose('nav-mobile')" class="footer__placeholder">
+    </article>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.2.0/vanilla-masker.min.js" integrity="sha512-RbMQw6xKGymv6bRMO4z5OxHBzzem7BPEQX7nTJC9G08A70gXdUka76Rvgey83MsSXrIEJddog0vxUKN6iTce2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/index.js"></script>
+    <script src="./src/post.js"></script>
+    <script src="./src/info.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+.roadmap__
+    &placeholder
+        width: 100%
+        height: 725px
+
+        display: flex
+        flex-direction: column
+        
+        align-items: center
+        margin-top: 50px
+
+        @media screen and (max-width: 1000px)
+            height: auto
+
+    &content
+        width: 100%
+        max-width: 1000px
+
+    &header
+        display: flex
+        width: 100%
+        justify-content: space-between
+        position: relative
+        z-index: 30
+        margin-bottom: -20px
+
+        @media screen and (max-width: 1000px)
+            margin-bottom: 0
+
+    &cardsplaceholder
+        width: 100%
+        height: 100%
+
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+
+        @media screen and (max-width: 1000px)
+            flex-direction: column
+            align-items: center
+            margin-top: 15px
+
+
+.roadmapheader__
+    &info
+        width: 80%
+
+        > h1
+            font-size: 32px
+
+        @media screen and (max-width: 1000px)
+            width: 70%
+
+    &img
+        width: 180px
+        height: 180px
+        position: absolute
+        right: -35px
+        bottom: -66px
+
+        @media screen and (max-width: 1000px)
+            width: 140px
+            height: 140px
+            right: -40px
+            bottom: -38px
+            z-index: 99
+
+        > img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.cardMob
+    width: 300px
+    font-size: 20px
+    height: 570px
+
+    @media screen and (max-width: 1000px)
+        min-height: 200px
+        height: auto
+        margin-bottom: 15px
+        font-size: normal
+        width: 100%
+        max-width: 100%
+
+.cardroadmap__
+    &content
+        width: 100%
+        height: 100%
+        padding: 20px 0
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        
+
+    &descCard
+        @media screen and (max-width: 1000px)
+            display: none
+
+    &tech
+        margin: 20px 0
+
+        @media screen and (max-width: 1000px)
+            margin: 0
+
+    &header
+        height: 40px
+
+        @media screen and (max-width: 1000px)
+            height: 30px

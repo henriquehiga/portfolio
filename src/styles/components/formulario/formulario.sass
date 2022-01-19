@@ -1,0 +1,122 @@
+.formulario__
+    &placeholder
+        width: 100%
+
+        height: auto
+        margin-top: 50px
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        flex-direction: column
+
+
+    &content
+        min-width: 1000px
+        max-width: 1000px
+        height: 100%
+
+        display: flex
+        align-items: center
+
+        flex-direction: column
+
+        position: relative
+
+        @media screen and (max-width: 1000px)
+            min-width: 100%
+            max-width: 100%
+
+    &header
+        height: auto
+        width: 100%
+
+        display: flex
+        justify-content: space-between
+
+        align-items: flex-end
+        margin-bottom: 15px
+
+        @media screen and (max-width: 1000px)
+            width: 100%
+
+    &form
+        width: 100%
+        height: auto
+        z-index: 2
+
+        input, textarea
+            transition: 0.5s
+            padding: 22px
+            margin-bottom: 15px
+            background: linear-gradient(180deg, #506a8944 50%, #506a893a 67.19%, #506a8900 100%)
+            border-radius: 3px
+            border: none
+            font-size: 20px
+            color: white
+
+        input::placeholder, textarea::placeholder
+                font-size: 20px
+                color: white
+
+        > .inputFull > input, textarea
+            width: 100%
+
+
+.header__
+
+    &info
+        
+        > h2
+            font-size: 38px
+
+        @media screen and (max-width: 1000px)
+            > h2
+                font-size: 22px
+
+            width: 90%
+
+    &img
+        height: 180px
+        width: 180px
+
+        position: absolute
+        right: -50px
+        top: -25px
+        border-radius: 50%
+        z-index: 99
+            
+        > img
+            width: 100%
+            height: 100%
+            border-radius: 50%
+
+            object-fit: cover
+
+        @media screen and (max-width: 1000px)
+            top: -20px
+            right: -45px
+
+input[type=button]:hover
+    transition: 1s
+    background: linear-gradient(180deg, rgba(117, 114, 255, 0.19) 0%, rgba(61, 32, 204, 0.092) 67.19%, rgba(169, 152, 152, 0) 100%)
+
+.sendForm
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: auto
+    
+    > button
+        width: 49%
+        cursor: pointer
+        padding: 22px
+        border: none
+        font-size: large
+        color: white
+        background: linear-gradient(180deg, #506a8944 50%, #506a893a 67.19%, #506a8900 100%)
+
+.campoVazio
+    background: red

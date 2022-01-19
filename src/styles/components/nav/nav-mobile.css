@@ -1,0 +1,53 @@
+.nav-mobile-placeholder {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  height: 0px;
+  width: 90%;
+  max-width: 800px;
+  -webkit-transition: 2.5s;
+  transition: 2.5s;
+  z-index: 999999999999999999;
+}
+
+.nav-mobile-on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  border-radius: 20px 20px 0 0;
+  -webkit-box-shadow: 0 0 1em black;
+          box-shadow: 0 0 1em black;
+  -webkit-transition: 2.5s;
+  transition: 2.5s;
+}
+
+.nav-mobile-wrapper {
+  width: 100%;
+  background: #222;
+  border-radius: 20px 20px 0 0;
+  padding: 15px;
+  -webkit-transition: 2.5s;
+  transition: 2.5s;
+}
+
+.nav-mobile-wrapper > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-mobile-wrapper > ul > li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=nav-mobile.css.map */

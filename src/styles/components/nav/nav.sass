@@ -1,0 +1,76 @@
+.nav__
+    &placeholder
+        position: fixed
+        top: 0
+        width: 100%
+
+        display: flex
+        justify-content: center
+
+        z-index: 99999
+        min-height: 100px
+
+        background:#222
+        backdrop-filter: blur(6px)
+
+        @media screen and (max-width: 1000px)
+            min-height: 85px
+            max-height: 85px
+
+            padding: 10px 10px
+
+    &content
+        width: 1440px
+
+        padding: 0 20px
+
+        min-height: 100%
+        max-height: 100%
+
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        > span
+
+            >i
+                display: none
+
+                @media screen and (max-width: 1000px)
+                    display: block
+                    font-size: 26px
+
+        > ul
+            display: flex
+
+            @media screen and (max-width: 1000px)
+                display: none
+
+            > li
+                cursor: pointer
+
+                list-style: none
+                margin-right: 15px
+
+                color: white
+                padding: 2px 5px
+    
+                > a
+                    text-decoration: none
+                    color: white
+
+
+        > span 
+            color: #fff
+            
+            > h1
+                font-size: 2.6em
+
+        @media screen and (max-width: 1000px)
+            padding: 0 5px
+            font-size: 14px
+
+    &active
+        transition: 0.2s
+        border-bottom: solid 0px #fff
+        border-width: 3px

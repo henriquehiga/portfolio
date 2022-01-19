@@ -1,0 +1,203 @@
+.ball2 {
+  position: absolute;
+  width: 259px;
+  height: 259px;
+  right: -10%;
+  top: 410px;
+  z-index: -2;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, right top, from(#506a89), to(rgba(196, 196, 196, 0)));
+  background: linear-gradient(90deg, #506a89 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.ball4 {
+  position: absolute;
+  width: 259px;
+  height: 259px;
+  left: -10%;
+  z-index: -2;
+  top: 80px;
+  border-radius: 50%;
+  background: linear-gradient(298deg, #506a89 11%, rgba(196, 196, 196, 0) 90%);
+}
+
+@media screen and (max-width: 1000px) {
+  .ball4 {
+    top: 160px;
+  }
+}
+
+.ballFoto {
+  max-width: 560px;
+  max-height: 560px;
+  background: linear-gradient(346.07deg, #1B3C6D 3.3%, rgba(196, 196, 196, 0) 60.24%);
+}
+
+@media screen and (max-width: 1000px) {
+  .ballFoto {
+    max-width: 280px;
+    max-height: 280px;
+    min-width: 280px;
+    min-height: 280px;
+    position: static;
+    z-index: 3;
+  }
+}
+
+.ballEfeitoFoto {
+  position: absolute;
+  width: 126px;
+  height: 126px;
+  opacity: 0.2;
+  background-size: 10px 10px;
+  background-image: repeating-linear-gradient(45deg, #506a89 0, #506a89 1px, #e5e5f700 0, #e5e5f700 50%);
+  border-radius: 50%;
+  bottom: 100px;
+  right: 35px;
+  z-index: 22;
+  opacity: 75%;
+}
+
+@media screen and (max-width: 1000px) {
+  .ballEfeitoFoto {
+    top: 5%;
+    left: 5%;
+  }
+}
+
+.ballEfeitoFoto2 {
+  position: absolute;
+  width: 226px;
+  height: 226px;
+  opacity: 0.2;
+  background-size: 10px 10px;
+  background-image: repeating-linear-gradient(45deg, #506a89 0, #506a89 1px, #e5e5f700 0, #e5e5f700 50%);
+  border-radius: 50%;
+  bottom: 215px;
+  right: 365px;
+  z-index: 777;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 1000px) {
+  .ballEfeitoFoto2 {
+    width: 200px;
+    height: 200px;
+    bottom: 40%;
+    right: 5%;
+    z-index: 2;
+  }
+}
+
+.line {
+  width: auto;
+  height: 1px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+}
+
+.ballForm {
+  position: absolute;
+  z-index: 1;
+  top: -30px;
+  right: -50px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  opacity: 0.2;
+  background-image: radial-gradient(circle at center center, #000000, #e5e5f700), repeating-radial-gradient(circle at center center, #506a89, #506a89, 6px, black 12px, black 6px);
+  background-blend-mode: multiply;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.ballForm2 {
+  position: absolute;
+  z-index: 99;
+  top: 70px;
+  right: 90px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#506a89), to(rgba(196, 196, 196, 0)));
+  background: linear-gradient(180deg, #506a89 0%, rgba(196, 196, 196, 0) 100%);
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+
+@media screen and (max-width: 1000px) {
+  .ballForm2 {
+    top: 90px;
+  }
+}
+
+.square1 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: -5%;
+  z-index: -2;
+  bottom: 250px;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  background: -webkit-gradient(linear, left bottom, left top, from(#506a89), to(rgba(196, 196, 196, 0)));
+  background: linear-gradient(0deg, #506a89 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.square2 {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  left: 0;
+  z-index: -2;
+  bottom: 200px;
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
+  background: -webkit-gradient(linear, left bottom, left top, from(#506a89), to(rgba(196, 196, 196, 0)));
+  background: linear-gradient(0deg, #506a89 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.triangle {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 0;
+  z-index: 88;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid linear-gradient(0deg, #506a89 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.arrow1 {
+  position: absolute;
+  width: 200px;
+  height: 20px;
+  left: -50px;
+  z-index: -2;
+  bottom: 700px;
+  -webkit-transform: rotate(160deg);
+          transform: rotate(160deg);
+  background: -webkit-gradient(linear, left bottom, left top, from(#506a89), to(rgba(196, 196, 196, 0)));
+  background: linear-gradient(0deg, #506a89 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.arrow2 {
+  position: absolute;
+  width: 200px;
+  height: 20px;
+  right: -50px;
+  z-index: -2;
+  bottom: 600px;
+  -webkit-transform: rotate(220deg);
+          transform: rotate(220deg);
+  background: -webkit-gradient(linear, left bottom, left top, from(#506a89), to(rgba(196, 196, 196, 0)));
+  background: linear-gradient(0deg, #506a89 0%, rgba(196, 196, 196, 0) 100%);
+}
+/*# sourceMappingURL=effect.css.map */
